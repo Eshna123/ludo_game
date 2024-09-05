@@ -1,39 +1,63 @@
-<?xml version="1.0" encoding="utf-8"?>
+<!-- activity_main.xml -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
-    tools:context=".MainActivity">
+    android:padding="16dp">
 
+    <!-- Display Dice Roll -->
+    <TextView
+        android:id="@+id/diceValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <!-- Roll Dice Button -->
+    <Button
+        android:id="@+id/rollDiceButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Roll Dice"
+        android:layout_below="@id/diceValue"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <!-- Display Player Scores -->
+    <TextView
+        android:id="@+id/playerScores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scores"
+        android:layout_below="@id/rollDiceButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <!-- Control Buttons: New Game, Pause/Resume, Reset -->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:orientation="vertical">
-    <ImageView
-        android:layout_width="200sp"
-        android:layout_height="200sp"
+        android:layout_below="@id/playerScores"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/ludo">
-    </ImageView>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:textColor="#FFFFFF"
-        android:textSize="30dp"
-        android:textStyle="bold"
-        android:text="LUDO GAME"
-        android:layout_centerHorizontal="true"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="#000000"
-        android:text="PLAY"
-        android:onClick="onPlayClick"/>
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
 
+        <Button
+            android:id="@+id/newGameButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Game" />
+
+        <Button
+            android:id="@+id/pauseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pause" />
+
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reset" />
     </LinearLayout>
-
 </RelativeLayout>
